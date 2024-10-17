@@ -1,4 +1,5 @@
-.saludo {
-  text-align: center;
-  font-size: medium;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

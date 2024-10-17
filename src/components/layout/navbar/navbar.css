@@ -1,8 +1,17 @@
 .container-nav {
   background: linear-gradient(red, rgba(255, 0, 0, 0.542));
+}
+
+.container-nav-dark {
+  background: linear-gradient(rgb(28, 28, 98), rgba(0, 0, 255, 0.668));
+}
+
+.asd {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 3px;
+  border-radius: 10px;
 }
 
 .logo {
@@ -10,4 +19,9 @@
   height: 100px;
   padding: 15px;
   border-radius: 25px;
+}
+
+.starting-li {
+  display: "flex";
+  gap: 45px;
 }
