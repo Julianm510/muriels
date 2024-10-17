@@ -1,7 +1,7 @@
 import { Footer } from "./components/layout/footer/Footer";
 import { Navbar } from "./components/layout/navbar/Navbar";
+import { Home } from "./components/pages/home/Home";
 import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
-import { PruebaGrid } from "./components/PruebaGrid";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -22,10 +22,12 @@ function App() {
 
   return (
     <>
+      <Home />
       <Navbar darkMode={darkMode} />
-      <ItemListContainer darkMode={darkMode} />
       <button onClick={cambiarModo}>botoncam</button>
+      <ItemListContainer darkMode={darkMode} />
       <button onClick={aparecer}>montar y desmontar</button>
+      <Home />
     </>
   );
 }
