@@ -5,6 +5,7 @@ import { MyPromise } from "./components/MyPromise";
 import { PruebaGrid } from "./components/PruebaGrid";
 import { useState, useEffect } from "react";
 import { Products } from "../Products";
+import { Card } from "./components/common/cartWidget/Card/Card";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,7 @@ function App() {
       <ItemListContainer darkMode={darkMode} />
       <button onClick={cambiarModo}>botoncam</button>
       <button onClick={aparecer}>montar y desmontar</button>
+      <Card />
       <MyPromise />
     </>
   );

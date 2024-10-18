@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Products } from "../../Products";
+import { dividerClasses } from "@mui/material";
+import { Card } from "./common/cartWidget/Card/Card";
 
 let myProductsProm = new Promise((res, rej) => {
-  const prod = [];
-  if (prod.length === 0) {
+  if (Products.length === 0) {
     rej("productos vacios");
   } else {
     res(Products);
@@ -11,11 +12,28 @@ let myProductsProm = new Promise((res, rej) => {
 });
 
 export const MyPromise = () => {
-  myProductsProm
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  const [myProducts, setMyProducts] = useState([]);
+  useEffect(() => {
+    myProductsProm
+      .then((data) => {
+        // if (data.length === 4) throw new Error("Error");
+        setMyProducts(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        // console.log("SIEMPRE SE EJECUTA")
+      });
+  }, []);
+
+  console.log(myProducts);
+
+  return (
+    <div>
+      {myProducts.map(({ id, title, price, stock }) => (
+        <Card key={id} title={title} price={price} stock={stock} />
+      ))}
+    </div>
+  );
 };
