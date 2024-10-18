@@ -1,4 +1,3 @@
-import { Card } from "../../common/cartWidget/Card/Card";
 import "./itemListContainer.css";
 import { Greeting } from "../../common/cartWidget/Card/Greeting";
 import { Products } from "../../../../Products";
@@ -6,7 +5,9 @@ import { Products } from "../../../../Products";
 export const ItemListContainer = ({ darkMode }) => {
   console.log("darkmode");
   console.log(darkMode);
+  console.log(Products);
   // console.log(Products);
+
   return (
     <>
       <div className={darkMode ? "pantalla-dark" : "pantalla "}>
