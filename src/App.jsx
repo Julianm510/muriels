@@ -27,8 +27,8 @@ function App() {
       <Navbar darkMode={darkMode} />
       <ItemListContainer darkMode={darkMode} />
       <button onClick={cambiarModo}>botoncam</button>
-      {/* <button onClick={aparecer}>montar y desmontar</button>
-      <MyPromise /> */}
+      <button onClick={aparecer}>montar y desmontar</button>
+      <MyPromise />
     </>
   );
 }
