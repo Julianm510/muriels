@@ -1,4 +1,4 @@
-export const Card = ({ title, price, stock, id }) => {
+export const Card = ({ title, price, stock, id, description }) => {
   return (
     <div>
       <div
@@ -7,7 +7,8 @@ export const Card = ({ title, price, stock, id }) => {
         <h2>Producto: {title}</h2>
         <h2>Precio: {price}</h2>
         <h2>Stock: {stock}</h2>
-        <h2>Id: {id}</h2>
+        <h2> {id}</h2>
+        <h2>descripcion: {description}</h2>
       </div>
     </div>
   );

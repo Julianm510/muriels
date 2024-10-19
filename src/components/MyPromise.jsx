@@ -31,8 +31,14 @@ export const MyPromise = () => {
 
   return (
     <div>
-      {myProducts.map(({ id, title, price, stock }) => (
-        <Card key={id} title={title} price={price} stock={stock} />
+      {myProducts.map(({ id, title, price, stock, description }) => (
+        <Card
+          key={id}
+          title={title}
+          price={price}
+          stock={stock}
+          description={description}
+        />
       ))}
     </div>
   );
