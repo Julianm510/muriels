@@ -2,10 +2,7 @@ import { Footer } from "./components/layout/footer/Footer";
 import { Navbar } from "./components/layout/navbar/Navbar";
 import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
 import { MyPromise } from "./components/MyPromise";
-import { PruebaGrid } from "./components/PruebaGrid";
 import { useState, useEffect } from "react";
-import { Products } from "../Products";
-import { Card } from "./components/common/cartWidget/Card/Card";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,11 +23,10 @@ function App() {
   return (
     <>
       <Navbar darkMode={darkMode} />
-      <ItemListContainer darkMode={darkMode} />
       <button onClick={cambiarModo}>botoncam</button>
+      <ItemListContainer darkMode={darkMode} />
       <button onClick={aparecer}>montar y desmontar</button>
-      <Card />
-      <MyPromise />
+      <Footer />
     </>
   );
 }
