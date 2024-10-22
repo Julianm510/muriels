@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Products } from "../../Products";
-import { dividerClasses } from "@mui/material";
 import { Card } from "./common/cartWidget/Card/Card";
 
 let myProductsProm = new Promise((res, rej) => {
