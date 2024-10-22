@@ -4,11 +4,13 @@ import { dividerClasses } from "@mui/material";
 import { Card } from "./common/cartWidget/Card/Card";
 
 let myProductsProm = new Promise((res, rej) => {
-  if (Products.length === 0) {
-    rej("productos vacios");
-  } else {
-    res(Products);
-  }
+  setTimeout(() => {
+    if (Products.length === 0) {
+      rej("productos vacios");
+    } else {
+      res(Products);
+    }
+  }, 2000);
 });
 
 export const MyPromise = () => {
