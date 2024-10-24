@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Products } from "../../Products";
-import { Card } from "./common/cartWidget/Card/Card";
+import { Products } from "../../../../../Products";
+import { Card } from "./Card";
 
 let myProductsProm = new Promise((res, rej) => {
   setTimeout(() => {

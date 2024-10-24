@@ -1,5 +1,6 @@
 import "./navbar.css";
-import { CartWidget } from "../../common/cartWidget/CartWidget/CartWidget";
+import { Card } from "../../common/cartWidget/Card/Card";
+import { CartWidget } from "../../pages/CartWidget/CartWidget";
 
 export const Navbar = ({ darkMode }) => {
   console.log("modoDark");

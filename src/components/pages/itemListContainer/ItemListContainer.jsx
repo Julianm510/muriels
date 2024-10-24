@@ -1,7 +1,8 @@
 import "./itemListContainer.css";
 import { Greeting } from "../../common/cartWidget/Card/Greeting";
 import { Products } from "../../../../Products";
-import { MyPromise } from "../../MyPromise";
+import { MyPromise } from "../../common/cartWidget/Card/MyPromise";
+import ItemList from "./ItemList";
 
 export const ItemListContainer = ({ darkMode }) => {
   console.log("darkmode");
