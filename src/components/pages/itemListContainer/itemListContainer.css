@@ -1,6 +1,9 @@
 .pantalla {
-  background: rgb(233, 227, 227);
-  height: 100%;
+  background: rgb(171, 167, 167);
+  display: grid;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: "100%";
 }
 
 .pantalla-dark {

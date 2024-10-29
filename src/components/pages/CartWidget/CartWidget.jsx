@@ -1,10 +1,13 @@
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
   return (
-    <div style={{ margin: "50px" }}>
-      <FaShoppingCart />
-      <span>0</span>
-    </div>
+    <Link to="/cart">
+      <div style={{ margin: "50px" }}>
+        <FaShoppingCart />
+        <span>0</span>
+      </div>
+    </Link>
   );
 };
