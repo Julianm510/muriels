@@ -6,6 +6,7 @@ export const CartWidget = () => {
     <Link to="/cart">
       <div style={{ margin: "50px" }}>
         <FaShoppingCart />
+
         <span>0</span>
       </div>
     </Link>

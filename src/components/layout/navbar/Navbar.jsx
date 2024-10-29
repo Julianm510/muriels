@@ -1,6 +1,6 @@
 import "./navbar.css";
-import { Card } from "../../common/cartWidget/Card/Card";
-import { CartWidget } from "../../pages/CartWidget/CartWidget";
+import { Card } from "../../common/CartWidget/Card/Card";
+import { CartWidget } from "../../common/CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 export const Navbar = ({ darkMode }) => {
@@ -20,10 +20,10 @@ export const Navbar = ({ darkMode }) => {
         </Link>
 
         <ul style={{ display: "flex", gap: "45px" }}>
-          <li>Inicio</li>
-          <li>Guantes de Boxeo</li>
-          <li>Equipamiento</li>
-          <li>Protección</li>
+          <Link to="/">Inicio</Link>
+          <Link to="/category/guantes">Guantes de Boxeo</Link>
+          <Link to="/category/equipamiento">Equipamiento</Link>
+          <Link to="/category/proteccion">Protección</Link>
         </ul>
         <CartWidget />
       </div>

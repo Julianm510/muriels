@@ -7,7 +7,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730219350/D_NQ_NP_647290-MLA53687208211_022023-O_ane8au.webp",
         description: "La mejor calidad en guantes",
         brand: "Everlast",
-        category: "Guantes",
+        category: "guantes",
     },
 
     {
@@ -18,7 +18,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730219853/winning_lace_boxing_gloves_-_white_4_srcywa.jpg",
         description: "Guantes echos especialmente a mano ",
         brand: "Winning",
-        category: "Guantes",
+        category: "guantes",
     },
     {
         id: "3",
@@ -28,7 +28,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220159/whatsapp-image-2023-09-23-at-11-47-181-7314fab4e661a5825316954805375421-640-0_knrr2t.jpg",
         description: "La mejor calidad nacional",
         brand: "Corti",
-        category: "Guantes",
+        category: "guantes",
     },
     {
         id: "4",
@@ -38,7 +38,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220218/22efdef5-cd27-4ffc-9839-e1abae366d35-769310d60017f151d817204795130811-1024-1024_scddr7.jpg",
         description: "Vendas de 4mts",
         brand: "Everlast",
-        category: "Vendas",
+        category: "equipamiento",
     },
     {
         id: "5",
@@ -48,7 +48,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220446/D_NQ_NP_874158-MLA31066996093_062019-O_a0rcdj.webp",
         description: "Vendas Adidas 5mts",
         brand: "Adidas",
-        category: "Vendas",
+        category: "equipamiento",
     },
     {
         id: "6",
@@ -58,7 +58,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220482/18531b66-47f9-49d1-a4a5-dea621f4fb5b1-e413dd9f401e7043b816870177502189-640-0_wsom06.jpg",
         description: "Vendas Proyect 5mts",
         brand: "Proyec",
-        category: "Vendas",
+        category: "equipamiento",
     },
     {
         id: "7",
@@ -68,7 +68,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220576/D_NQ_NP_699158-MLA75722604968_042024-O_ifpl4g.webp",
         description: "Cabezal para Sparrings",
         brand: "Corti",
-        category: "Equipamiento",
+        category: "proteccion",
     },
     {
         id: "8",
@@ -78,7 +78,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220622/D_NQ_NP_991599-MLU74520201379_022024-O_ax1ihs.webp",
         description: "Protector Efectivo para el cuidado de los dientes",
         brand: "Everlast",
-        category: "Equipamiento",
+        category: "proteccion",
     },
     {
         id: "9",
@@ -88,7 +88,7 @@ export const Products = [
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220627/523-protector-inguinal-reforzado-sintetico-rojo-2-e2256283f41e2fa2c017219274029018-1024-1024_cqcrap.webp",
         description: "Protector Efectivo para el cuidado de las zonas bajas",
         brand: "Adidas",
-        category: "Equipamiento",
+        category: "proteccion",
     }
 
 ]

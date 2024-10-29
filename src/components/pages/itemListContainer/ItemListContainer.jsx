@@ -1,7 +1,5 @@
 import "./itemListContainer.css";
-import { Greeting } from "../../common/cartWidget/Card/Greeting";
 import { Products } from "../../../../Products";
-import { MyPromise } from "../../common/cartWidget/Card/MyPromise";
 import ItemList from "./ItemList";
 
 // export const ItemListContainer = ({ darkMode }) => {
@@ -24,16 +22,23 @@ import ItemList from "./ItemList";
 // };
 
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
+  const { name } = useParams();
+
   const [items, setItems] = useState([]);
   useEffect(() => {
+    const unaFraccion = Products.filter(
+      (producto) => producto.category === name
+    );
+
     const getProducts = new Promise((resolve) => {
-      resolve(Products);
+      resolve(name ? unaFraccion : Products);
     });
     getProducts.then((res) => {
       setItems(res);
     });
-  }, []);
+  }, [name]);
   return <ItemList items={items} />;
 };
