@@ -4,9 +4,9 @@ import "./itemListContainer.css";
 const ItemList = ({ items }) => {
   return (
     <>
-      <div className="pantalla">
-        <h2 className="">Listado de productos</h2>
+      <h2 className="prod">Listado de productos</h2>
 
+      <div className="pantalla">
         {items.map(({ title, price, stock, id, description, image }) => (
           <Card
             key={id}
@@ -15,6 +15,7 @@ const ItemList = ({ items }) => {
             stock={stock}
             description={description}
             image={image}
+            id={id}
           />
         ))}
       </div>

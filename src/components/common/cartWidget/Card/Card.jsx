@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Card = ({ title, price, stock, id, description, image }) => {
   return (
     <div>
@@ -18,8 +20,11 @@ export const Card = ({ title, price, stock, id, description, image }) => {
         <h3>Stock: {stock}</h3>
         <h3> {id}</h3>
         <h3>descripcion: {description}</h3>
-        <button>Detalles</button>
+        <Link to={`/itemDetail/${id}`}>
+          <button>Detalles</button>
+        </Link>
       </div>
     </div>
   );
 };
+``;

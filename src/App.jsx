@@ -1,9 +1,11 @@
 import { Footer } from "./components/layout/footer/Footer";
 import { Navbar } from "./components/layout/navbar/Navbar";
-import { CartWidget } from "./components/pages/CartWidget/CartWidget";
+
 import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ItemDetailContainer from "./components/pages/ItemDetail/ItemDetailContainer";
+import { CartContainer } from "./components/pages/cart/CartContainer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +35,10 @@ function App() {
 
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/cart" element={<CartWidget />} />
+          <Route path="/category/:name" element={<ItemListContainer />} />
+          <Route path="/cart" element={<CartContainer />} />
+          <Route path="/itemdetail/:id" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h2>404 Not Found</h2>} />
         </Routes>
       </BrowserRouter>
     </>

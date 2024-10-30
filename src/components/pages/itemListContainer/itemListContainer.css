@@ -1,9 +1,14 @@
 .pantalla {
   background: rgb(171, 167, 167);
   display: grid;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: "100%";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+.prod {
+  text-align: center;
+  margin: 15px;
 }
 
 .pantalla-dark {
