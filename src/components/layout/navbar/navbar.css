@@ -25,3 +25,11 @@
   display: "flex";
   gap: 45px;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua;
+}
