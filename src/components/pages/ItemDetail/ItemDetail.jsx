@@ -7,7 +7,7 @@ const ItemDetail = ({ item }) => {
     <div
       style={{
         border: "3px solid black",
-        height: "320px",
+        height: "360px",
         width: "300px",
         display: "flex",
         justifyContent: "space-around",

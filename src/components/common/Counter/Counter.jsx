@@ -1,3 +1,4 @@
+import { Margin } from "@mui/icons-material";
 import { useState } from "react";
 
 export const Counter = ({ stock }) => {
@@ -19,11 +20,11 @@ export const Counter = ({ stock }) => {
   console.log(saludo);
 
   return (
-    <div>
+    <div style={{ margin: "30px" }}>
       <h2>contador: {contador}</h2>
       <button onClick={sumar}>Sumar</button>
       <button onClick={restar}>Restar</button>
-      <button onClick={saludar}>Saludar</button>
+      {/* <button onClick={saludar}>Saludar</button> */}
 
       <button>Agregar al carrito</button>
     </div>
