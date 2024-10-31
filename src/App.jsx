@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/pages/ItemDetail/ItemDetailContainer";
 import { CartContainer } from "./components/pages/cart/CartContainer";
+import { Checkout } from "./components/pages/checkout/Checkout";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -39,6 +40,7 @@ function App() {
           <Route path="/cart" element={<CartContainer />} />
           <Route path="/itemdetail/:id" element={<ItemDetailContainer />} />
           <Route path="*" element={<h2>404 Not Found</h2>} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </>
