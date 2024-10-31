@@ -1,5 +1,6 @@
 import React from "react";
 import "./itemDetails.css";
+import { Counter } from "../../common/Counter/Counter";
 
 const ItemDetail = ({ item }) => {
   return (
@@ -13,8 +14,10 @@ const ItemDetail = ({ item }) => {
         flexWrap: "wrap",
       }}
     >
+      <h2>{item.title}</h2>
       <h2>{item.description}</h2>
       <img src={item.image} style={{ width: "250px", height: "250px" }} />
+      <Counter stock={item.stock} />
     </div>
   );
 };
