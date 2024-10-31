@@ -23,7 +23,8 @@ export const Counter = () => {
       <h2>contador: {contador}</h2>
       <button onClick={sumar}>Sumar</button>
       <button onClick={restar}>Restar</button>
-      <button onClick={saludar}>Saludar</button>
+      {/* <button onClick={saludar}>Saludar</button> */}
+      <button>Agregar al carrito</button>
     </div>
   );
 };
