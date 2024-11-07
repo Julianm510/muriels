@@ -2,7 +2,7 @@ export const Products = [
     {
         id: "1",
         title: "Guantes Everlast",
-        price: 2500,
+        price: 50000,
         stock: 15,
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730219350/D_NQ_NP_647290-MLA53687208211_022023-O_ane8au.webp",
         description: "La mejor calidad en guantes",
@@ -43,7 +43,7 @@ export const Products = [
     {
         id: "5",
         title: "Vendas Boxeo Adidas",
-        price: 1000,
+        price: 9000,
         stock: 17,
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220446/D_NQ_NP_874158-MLA31066996093_062019-O_a0rcdj.webp",
         description: "Vendas Adidas 5mts",
