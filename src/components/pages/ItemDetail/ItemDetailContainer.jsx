@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Products } from "../../../../Products";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
+  const { addToCart } = useContext(CartContext);
 
   const [item, setItem] = useState({});
 
@@ -12,7 +14,12 @@ const ItemDetailContainer = () => {
     let productSelected = Products.find((producto) => producto.id === id);
     setItem(productSelected);
   }, [id]);
-  return <ItemDetail item={item} />;
+
+  const agregarAlCarrito = (cantidad) => {
+    let objeto = { ...item, quantity: cantidad };
+    addToCart(objeto);
+  };
+  return <ItemDetail item={item} agregarAlCarrito={agregarAlCarrito} />;
 };
 
 export default ItemDetailContainer;
