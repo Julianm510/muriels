@@ -14,11 +14,9 @@ export const Card = ({ title, price, stock, id, description, image }) => {
         }}
       >
         <img src={image} style={{ width: "150px", height: "150px" }} />
-
         <h2>Producto: {title}</h2>
         <h3>Precio: {price}</h3>
         <h3>Stock: {stock}</h3>
-        <h3> {id}</h3>
         <h3>descripcion: {description}</h3>
         <Link to={`/itemDetail/${id}`}>
           <button>Detalles</button>
