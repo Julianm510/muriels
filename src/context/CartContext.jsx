@@ -34,7 +34,7 @@ export const CartContextProvider = ({ children }) => {
   };
 
   const getTotalQuantity = (id) => {
-    const product = cart.find((elemento) => (elemento.id = id));
+    const product = cart.find((elemento) => elemento.id === id);
     return product ? product.quantity : 0;
   };
 
