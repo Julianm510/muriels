@@ -6,7 +6,9 @@ import { CartContext } from "../../../context/CartContext";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, getTotalQuantity } = useContext(CartContext);
+
+  let totalInCart = getTotalQuantity(id);
 
   const [item, setItem] = useState({});
 
@@ -19,7 +21,13 @@ const ItemDetailContainer = () => {
     let objeto = { ...item, quantity: cantidad };
     addToCart(objeto);
   };
-  return <ItemDetail item={item} agregarAlCarrito={agregarAlCarrito} />;
+  return (
+    <ItemDetail
+      item={item}
+      agregarAlCarrito={agregarAlCarrito}
+      totalInCart={totalInCart}
+    />
+  );
 };
 
 export default ItemDetailContainer;

@@ -1,11 +1,13 @@
 import { Margin } from "@mui/icons-material";
 import { useState } from "react";
 
-export const Counter = ({ stock, agregarAlCarrito }) => {
-  const [contador, setContador] = useState(0);
+export const Counter = ({ stock, agregarAlCarrito, totalInCart }) => {
+  const [contador, setContador] = useState(1);
 
   const sumar = () => {
-    stock > contador ? setContador(contador + 1) : alert("Stock maximo");
+    stock - totalInCart > contador
+      ? setContador(contador + 1)
+      : alert("Stock maximo");
   };
 
   const restar = () => {
