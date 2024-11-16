@@ -30,9 +30,11 @@ export const CartContainer = () => {
         );
       })}
 
-      <button onClick={resetCart}>Limpiar carrito</button>
+      {cart.length > 0 && <button onClick={resetCart}>Limpiar carrito</button>}
 
-      <h2>el total a pagar es {totalCarrito}</h2>
+      <h2 style={{ color: cart.length > 0 ? "red" : "blue" }}>
+        el total a pagar es {totalCarrito}
+      </h2>
 
       <Link to="/checkout">
         <button>Finalizar Compra</button>

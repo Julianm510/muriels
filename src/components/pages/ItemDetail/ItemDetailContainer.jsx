@@ -3,6 +3,7 @@ import { Products } from "../../../../Products";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
+import { toast } from "sonner";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const ItemDetailContainer = () => {
   const agregarAlCarrito = (cantidad) => {
     let objeto = { ...item, quantity: cantidad };
     addToCart(objeto);
+    toast.success("Producto agregado correctamente", { closeButton: true });
   };
   return (
     <ItemDetail

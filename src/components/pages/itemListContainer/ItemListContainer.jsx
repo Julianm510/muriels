@@ -23,6 +23,7 @@ import ItemList from "./ItemList";
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GiH2O } from "react-icons/gi";
 
 export const ItemListContainer = () => {
   const { name } = useParams();
@@ -37,8 +38,14 @@ export const ItemListContainer = () => {
       resolve(name ? unaFraccion : Products);
     });
     getProducts.then((res) => {
-      setItems(res);
+      setTimeout(() => {
+        setTimeout;
+        setItems(res);
+      }, 2000);
     });
   }, [name]);
+  if (items.length === 0) {
+    return <h2>cargando...</h2>;
+  }
   return <ItemList items={items} />;
 };
