@@ -3,7 +3,8 @@ import ItemList from "./ItemList";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { Products } from "../../../../Products";
 
 export const ItemListContainer = () => {
   const { name } = useParams();
@@ -27,5 +28,17 @@ export const ItemListContainer = () => {
   if (items.length === 0) {
     return <h2>cargando...</h2>;
   }
-  return <ItemList items={items} />;
+
+  // const funcionAgregar = () => {
+  //   const productsCollection = collection(db, "Products");
+  //   Products.forEach((product) => {
+  //     addDoc(productsCollection, product);
+  //   });
+  // };
+  return (
+    <div>
+      <ItemList items={items} />;
+      {/* <button onClick={funcionAgregar}>cargar productos</button> */}
+    </div>
+  );
 };
