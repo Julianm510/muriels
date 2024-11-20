@@ -53,7 +53,7 @@ export const Products = [
     {
         id: "6",
         title: "Vendas Proyec",
-        price: 950,
+        price: 11500,
         stock: 23,
         image: "https://res.cloudinary.com/dufycalt2/image/upload/v1730220482/18531b66-47f9-49d1-a4a5-dea621f4fb5b1-e413dd9f401e7043b816870177502189-640-0_wsom06.jpg",
         description: "Vendas Proyect 5mts",
