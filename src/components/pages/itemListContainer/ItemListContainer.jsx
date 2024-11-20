@@ -1,44 +1,44 @@
 import "./itemListContainer.css";
-import { Products } from "../../../../Products";
 import ItemList from "./ItemList";
-
-// export const ItemListContainer = ({ darkMode }) => {
-//   console.log("darkmode");|
-//   console.log(darkMode);
-//   console.log(Products);
-//   // console.log(Products);
-
-//   return (
-//     <>
-//       <div className={darkMode ? "pantalla-dark" : "pantalla "}>
-//         <Greeting
-//           title="¡Bienvenidos a nuestra tienda! , pronto estaremos disponibles."
-//           hora="15:30"
-//         />
-//         <MyPromise />
-//       </div>
-//     </>
-//   );
-// };
-
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
+import { Products } from "../../../../Products";
 
 export const ItemListContainer = () => {
   const { name } = useParams();
 
   const [items, setItems] = useState([]);
   useEffect(() => {
-    const unaFraccion = Products.filter(
-      (producto) => producto.category === name
-    );
+    const productsCollection = collection(db, "Products");
 
-    const getProducts = new Promise((resolve) => {
-      resolve(name ? unaFraccion : Products);
-    });
-    getProducts.then((res) => {
-      setItems(res);
+    let docsRef = productsCollection;
+    if (name) {
+      docsRef = query(productsCollection, where("category", "==", name));
+    }
+
+    getDocs(docsRef).then((res) => {
+      let arrayEntendible = res.docs.map((doc) => {
+        return { ...doc.data(), id: doc.id };
+      });
+      setItems(arrayEntendible);
     });
   }, [name]);
-  return <ItemList items={items} />;
+  if (items.length === 0) {
+    return <h2>cargando...</h2>;
+  }
+
+  // const funcionAgregar = () => {
+  //   const productsCollection = collection(db, "Products");
+  //   Products.forEach((product) => {
+  //     addDoc(productsCollection, product);
+  //   });
+  // };
+  return (
+    <div>
+      <ItemList items={items} />;
+      {/* <button onClick={funcionAgregar}>cargar productos</button> */}
+    </div>
+  );
 };
