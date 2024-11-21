@@ -28,6 +28,7 @@ function App() {
             <Route path="*" element={<h2>404 Not Found</h2>} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
+          <Footer />
         </CartContextProvider>
       </BrowserRouter>
     </>

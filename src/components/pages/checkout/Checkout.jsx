@@ -46,29 +46,31 @@ const Checkout = () => {
     return <h1>Gracias por su compra, tu N° de orden es: {orderId} </h1>;
   }
   return (
-    <div>
-      <form onSubmit={funcionDelForm}>
-        <input
-          type="text"
-          placeholder="Inserte Nombre"
-          name="name"
-          onChange={capturarInfo}
-        />
-        <input
-          type="email"
-          placeholder="@hotmail.com"
-          name="email"
-          onChange={capturarInfo}
-        />
-        <input
-          type="text"
-          placeholder="Numero de telefono"
-          name="phoneNumber"
-          onChange={capturarInfo}
-        />
-        <button>Comprar</button>
-        <button type="button">cancelar</button>
-      </form>
+    <div className="card-grid">
+      <div className="card">
+        <form onSubmit={funcionDelForm}>
+          <input
+            type="text"
+            placeholder="Inserte Nombre"
+            name="name"
+            onChange={capturarInfo}
+          />
+          <input
+            type="email"
+            placeholder="@hotmail.com"
+            name="email"
+            onChange={capturarInfo}
+          />
+          <input
+            type="text"
+            placeholder="Numero de telefono"
+            name="phoneNumber"
+            onChange={capturarInfo}
+          />
+          <button>Comprar</button>
+          <button type="button">cancelar</button>
+        </form>
+      </div>
     </div>
   );
 };
