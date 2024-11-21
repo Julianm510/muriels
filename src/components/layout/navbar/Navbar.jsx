@@ -2,6 +2,7 @@ import "./navbar.css";
 import { Card } from "../../common/CartWidget/Card/Card";
 import { CartWidget } from "../../common/CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
 
 export const Navbar = ({ darkMode }) => {
   console.log("modoDark");

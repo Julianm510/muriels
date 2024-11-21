@@ -1,5 +1,6 @@
 .container-nav {
   background: linear-gradient(red, rgba(255, 0, 0, 0.542));
+  padding: 0 20px;
 }
 
 .container-nav-dark {
@@ -31,5 +32,5 @@ a {
 }
 
 a:hover {
-  color: aqua;
+  color: rgb(222, 206, 206);
 }
