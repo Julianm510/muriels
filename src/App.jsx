@@ -6,9 +6,11 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/pages/ItemDetail/ItemDetailContainer";
 import { CartContainer } from "./components/pages/cart/CartContainer";
-import { Checkout } from "./components/pages/checkout/Checkout";
+Checkout;
+
 import { CartContextProvider } from "./context/CartContext";
 import { Toaster } from "sonner";
+import Checkout from "./components/pages/checkout/Checkout";
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="*" element={<h2>404 Not Found</h2>} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
+          <Footer />
         </CartContextProvider>
       </BrowserRouter>
     </>

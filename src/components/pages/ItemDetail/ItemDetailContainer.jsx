@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Products } from "../../../../Products";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
@@ -7,7 +6,6 @@ import { toast } from "sonner";
 import { db } from "../../../firebaseConfig";
 
 import { addDoc, collection, doc, getDoc } from "firebase/firestore";
-import { collapseClasses } from "@mui/material";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -30,6 +28,7 @@ const ItemDetailContainer = () => {
     addToCart(objeto);
     toast.success("Producto agregado correctamente", { closeButton: true });
   };
+
   return (
     <ItemDetail
       item={item}

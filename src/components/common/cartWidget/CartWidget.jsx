@@ -1,19 +1,20 @@
-import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import Badge from "@mui/material/Badge";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import "./cartWidget.css";
 
 export const CartWidget = () => {
-  const { cart, getTotalProducts } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
-  let sumaCarrito = getTotalProducts();
   return (
-    <Link to="/cart">
-      <div style={{ margin: "50px" }}>
-        <FaShoppingCart />
-
-        <span>{sumaCarrito}</span>
-      </div>
-    </Link>
+    <div>
+      <Link to="/cart">
+        <Badge badgeContent={cart.length} color="primary" showZero="true">
+          <ShoppingCartIcon />
+        </Badge>
+      </Link>
+    </div>
   );
 };

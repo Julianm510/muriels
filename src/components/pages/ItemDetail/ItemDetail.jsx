@@ -3,25 +3,18 @@ import { Counter } from "../../common/Counter/Counter";
 
 const ItemDetail = ({ item, agregarAlCarrito, totalInCart }) => {
   return (
-    <div
-      style={{
-        border: "3px solid black",
-        height: "360px",
-        width: "300px",
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-      }}
-    >
-      <h2>{item.title}</h2>
-      <h2>{item.description}</h2>
-      <img src={item.image} style={{ width: "250px", height: "250px" }} />
-
-      <Counter
-        stock={item.stock}
-        agregarAlCarrito={agregarAlCarrito}
-        totalInCart={totalInCart}
-      />
+    <div>
+      <div className="tarjet-grid">
+        <div className="tarjet">
+          <h2>{item.title}</h2>
+          <img className="producto1" src={item.image} />
+          <Counter
+            stock={item.stock}
+            agregarAlCarrito={agregarAlCarrito}
+            totalInCart={totalInCart}
+          />
+        </div>
+      </div>
     </div>
   );
 };
