@@ -4,8 +4,8 @@ import { Counter } from "../../common/Counter/Counter";
 const ItemDetail = ({ item, agregarAlCarrito, totalInCart }) => {
   return (
     <div>
-      <div className="card-grid">
-        <div className="card">
+      <div className="tarjet-grid">
+        <div className="tarjet">
           <h2>{item.title}</h2>
           <img className="producto1" src={item.image} />
           <Counter

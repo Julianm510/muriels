@@ -1,0 +1,29 @@
+.contenedor {
+  background: rgb(211, 203, 203);
+}
+.altura {
+  height: 100vh;
+  display: grid;
+  justify-content: flex-start;
+  place-items: center;
+}
+
+.cart {
+  background-color: rgb(238, 233, 233);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 15px;
+  margin: 15px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}

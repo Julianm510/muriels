@@ -31,7 +31,7 @@ export const Card = ({ title, price, id, image }) => {
           <img className="producto" src={image} />
 
           <h3>Producto: {title}</h3>
-          <h3>Precio: {price}</h3>
+          <h3>Precio: ${price}</h3>
           <Link to={`/itemDetail/${id}`}>
             <button>Detalles</button>
           </Link>
