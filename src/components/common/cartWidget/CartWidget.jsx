@@ -11,7 +11,7 @@ export const CartWidget = () => {
   return (
     <div>
       <Link to="/cart">
-        <Badge badgeContent={cart.length} color="primary" showZero="true">
+        <Badge badgeContent={cart.length} color="primary" showZero>
           <ShoppingCartIcon />
         </Badge>
       </Link>
