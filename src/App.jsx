@@ -1,7 +1,6 @@
 import { Footer } from "./components/layout/footer/Footer";
 import { Navbar } from "./components/layout/navbar/Navbar";
 
-import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/pages/ItemDetail/ItemDetailContainer";
@@ -11,6 +10,7 @@ Checkout;
 import { CartContextProvider } from "./context/CartContext";
 import { Toaster } from "sonner";
 import Checkout from "./components/pages/checkout/Checkout";
+import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
 
 function App() {
   return (

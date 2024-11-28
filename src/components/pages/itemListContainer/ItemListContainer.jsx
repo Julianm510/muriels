@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
 import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
-import { Products } from "../../../../Products";
 import { CircularProgress } from "@mui/material";
 
 export const ItemListContainer = () => {
