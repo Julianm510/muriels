@@ -1,4 +1,4 @@
-import { Card } from "../../common/cartWidget/Card/Card";
+import { Card } from "../../common/Card/Card";
 import ModalCustoms from "../../common/ModalCustoms";
 import "./itemListContainer.css";
 
